@@ -1,5 +1,3 @@
-package contracts.com.todarch.um.cm.messaging
-
 import org.springframework.cloud.contract.spec.Contract
 
 Contract.make {

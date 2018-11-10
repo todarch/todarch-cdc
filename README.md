@@ -33,3 +33,12 @@ mvn clean install
 ```shell
 jar tf ~/.m2/repository/com/todarch/todarch-cdc/1.0-SNAPSHOT/todarch-cdc-1.0-SNAPSHOT.jar
 ```
+
+* Do not use exact string value for `errorMessage` for provider side verification. It is enough to agree on `errorCode`, it does not worth to break tests when error message string is changed.
+
+```shell
+body(
+    errorCode: "USER4",
+    errorMessage: $(c("Account is not active."), p(anyNonBlankString()))
+)
+```

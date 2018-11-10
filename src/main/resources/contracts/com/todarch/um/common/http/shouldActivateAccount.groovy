@@ -38,7 +38,7 @@ import org.springframework.cloud.contract.spec.Contract
       }
       body(
         errorCode: "USER2",
-        errorMessage: "Invalid activation code."
+        errorMessage: $(c("Invalid activation code."), p(anyNonBlankString()))
       )
     }
   },

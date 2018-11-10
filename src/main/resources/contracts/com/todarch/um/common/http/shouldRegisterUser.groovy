@@ -38,7 +38,7 @@ import org.springframework.cloud.contract.spec.Contract
       }
       body(
         errorCode: "USER1",
-        errorMessage: "Email address already in use."
+        errorMessage: $(c("Email address already in use."), p(anyNonBlankString()))
       )
     }
   }
